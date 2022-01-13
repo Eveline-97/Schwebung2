@@ -1,0 +1,122 @@
+/*GENERAL*/
+html {
+    background-color: black;
+    background-color: rgb(240, 165, 180);
+    letter-spacing: 0.1em;
+}
+
+/*NOTES*/
+#a-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.a {
+    padding: 5px;
+    border: 2px solid black;
+    width: 25px;
+    height: 25px;
+}
+
+.selected {
+    border: 2px solid white;
+    width: 32px;
+    height: 32px;
+}
+
+.b {
+    background-color: rgb(160, 231, 250);
+}
+.g {
+    background-color: rgb(180, 248, 200);
+}
+.r {
+    background-color: rgb(255, 174, 188);
+}
+.y {
+    background-color: rgb(251, 231, 198);
+}
+
+/***HEADER***/
+header {
+    /*background-color: rgb(255, 174, 188);*/
+    color: black;
+    font-family: 'Amatic SC';
+    margin: 0em 1.5em;
+    padding: 0.3em;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    font-style: italic;
+}
+
+#title {
+    font-size: 4em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+#title > span {
+    color: black;
+    padding: 1px;
+}
+
+/***SCHEME***/
+#scheme {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0em 1.2em 1.5em 1.2em;
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: black;
+    /*background-color: rgb(180, 248, 200);*/
+    font-family: 'Amatic SC';
+}
+
+/*CONTROLS*/
+#controls {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#controls > p,
+#controls > button {
+    padding: 0.4em;
+}
+
+button {
+    font-family: 'Amatic SC';
+    width: 40px;
+    margin-left: 4px;
+}
+button:hover {
+    cursor: pointer;
+}
+
+/*LOG*/
+#log {
+    display: flex;
+    flex-flow: row wrap;
+}

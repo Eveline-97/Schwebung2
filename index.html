@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schwebung by Eveline Vervliet, 2022">
+    <title>Schwebung</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script src="/assets/js/keyframes.dist.js"></script>
+    <script src="https://unpkg.com/tone@14.8.35/build/Tone.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="title">
+            <span id="letter0">S</span>
+            <span id="letter1">c</span>
+            <span id="letter2">h</span>
+            <span id="letter3">w</span>
+            <span id="letter4">e</span>
+            <span id="letter5">b</span>
+            <span id="letter6">u</span>
+            <span id="letter7">n</span>
+            <span id="letter8">g</span>
+            <span id="letter9">&nbsp;#</span>
+            <span id="letter10">2</span>
+        </h1>
+        <h3>by <a href="https://evelinevervliet.com" target="_blank" rel="noopener noreferrer">Eveline Vervliet</a><br>2022</h3>
+    </header>
+    <div id="scheme">
+        <div id="controls">
+            <button id="start">start</button>
+            <button id="add-row">+</button>
+            <button id="remove-row">-</button>
+            <p id="row-amount">Rows: 1</p>
+            <input class="slider" id="speed" type="range" min="50" max="500" value="250">
+            <p id="speed-amount">250ms between notes</p>
+        </div>
+
+        <div id="log">
+            <p id="current-row">Current row: 0</p>
+            <p>&nbsp;//&nbsp;</p>
+            <p id="current-note">Current note: 0</p>
+            <p>&nbsp;//&nbsp;</p>
+            <p id="repeats">Repeats: 0</p>
+        </div>
+    </div>
+    
+    <main>
+        <div id="a-container">
+            <div id="row-1" class="row">
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+                <p class="a b"></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
