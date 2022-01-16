@@ -4,19 +4,11 @@ let row = 0;
 let repeat = 1;
 
 //list for releases
-let releases = {
-    "box0": 0,
-    "box1": 0,
-    "box2": 0,
-    "box3": 0,
-    "box4": 0,
-    "box5": 0,
-    "box6": 0,
-    "box7": 0,
-    "box8": 0,
-    "box9": 0,
-    "box10": 0,
-    "box11": 0,
+let releases = [];
+for (let i = 0; i < aList.length; i++) {
+    releases.push(
+        `box${i}: ${0}`
+    )
 }
 
 //init synths
