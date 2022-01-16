@@ -3,14 +3,34 @@ let current = 0;
 let row = 0;
 let repeat = 1;
 
+//list for releases
+let releases = {
+    "box0": 0,
+    "box1": 0,
+    "box2": 0,
+    "box3": 0,
+    "box4": 0,
+    "box5": 0,
+    "box6": 0,
+    "box7": 0,
+    "box8": 0,
+    "box9": 0,
+    "box10": 0,
+    "box11": 0,
+}
+
 //init synths
 const synth = new Tone.PolySynth(Tone.Synth).toDestination();
 
 for (let i = 0; i < aList.length; i++) {
     let a = aList[i];
+
     a.addEventListener('click', () => {
+        let now = Tone.now();
         if (a.classList.contains('selected')) {
             a.classList.remove('selected');
+            console.log(releases[a.id]);
+            synth.triggerRelease(releases[a.id]);
         } else {
             //schwebung in positioning
             let left = Math.random()*10.;
@@ -21,29 +41,30 @@ for (let i = 0; i < aList.length; i++) {
             //make current 'note' bigger
             a.classList.add('selected');
 
-            //synth
-            let now = Tone.now();
-
             //colour changes + sound
             if (a.classList.contains('b')) {
                 a.classList.remove('b');
                 a.classList.add('g');
-                synth.triggerAttackRelease(400+top, 5, now);
+                synth.triggerAttack(400+top, now);
+                releases[a.id] = 400+top;
             }
             else if (a.classList.contains('g')) {
                 a.classList.remove('g');
                 a.classList.add('r');
-                synth.triggerAttackRelease(500-top, 5, now);
+                synth.triggerAttack(500-top, now);
+                releases[a.id] = 500-top;
             }
             else if (a.classList.contains('r')) {
                 a.classList.remove('r');
                 a.classList.add('y');
-                synth.triggerAttackRelease(600-top, 5, now);
+                synth.triggerAttack(600-top, now);
+                releases[a.id] = 600-top;
             }
             else if (a.classList.contains('y')) {
                 a.classList.remove('y');
                 a.classList.add('b');
-                synth.triggerAttackRelease(300+top, 5, now);
+                synth.triggerAttack(300+top, now);
+                releases[a.id] = 300+top;
             }
         }
     });
