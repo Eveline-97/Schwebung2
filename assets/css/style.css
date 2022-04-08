@@ -18,6 +18,13 @@ html {
     align-items: center;
 }
 
+.column {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .a {
     padding: 5px;
     border: 2px solid black;
@@ -80,18 +87,26 @@ a:hover {
     padding: 1px;
 }
 
-/***SCHEME***/
-#scheme {
+/***REPETITIONS***/
+#log {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
     margin: 0em 1.2em 1.5em 1.2em;
     padding: 0.5em;
     font-size: 1.2em;
     color: black;
     /*background-color: rgb(180, 248, 200);*/
     font-family: 'Amatic SC';
+}
+
+.repeats {
+    font-family: 'Amatic SC';
+    font-size: 1.8em;
+    margin-left: 0.5em;
+    width: 25px;
+    height: 25px;
 }
 
 /*CONTROLS*/

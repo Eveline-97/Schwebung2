@@ -35,39 +35,47 @@
         <h3>by <a href="https://evelinevervliet.com" target="_blank" rel="noopener noreferrer">Eveline Vervliet</a><br>2022</h3>
     </header>
     <div id="scheme">
-        <div id="controls">
-            <button id="start">start</button>
-            <button id="add-row">+</button>
-            <button id="remove-row">-</button>
-            <p id="row-amount">Rows: 1</p>
-            <input class="slider" id="speed" type="range" min="50" max="500" value="250">
-            <p id="speed-amount">250ms between notes</p>
-        </div>
-
-        <div id="log">
-            <p id="current-row">Current row: 0</p>
-            <p>&nbsp;//&nbsp;</p>
-            <p id="current-note">Current note: 0</p>
-            <p>&nbsp;//&nbsp;</p>
-            <p id="repeats">Repeats: 0</p>
-        </div>
     </div>
     
     <main>
         <div id="a-container">
             <div id="row-1" class="row">
-                <p class="a b" id="box0"></p>
-                <p class="a b" id="box1"></p>
-                <p class="a b" id="box2"></p>
-                <p class="a b" id="box3"></p>
-                <p class="a b" id="box4"></p>
-                <p class="a b" id="box5"></p>
-                <p class="a b" id="box6"></p>
-                <p class="a b" id="box7"></p>
-                <p class="a b" id="box8"></p>
-                <p class="a b" id="box9"></p>
-                <p class="a b" id="box10"></p>
-                <p class="a b" id="box11"></p>
+                <div class="column">
+                    <p class="repeats" id="repeats0">0</p>
+                    <p class="a b" id="box0"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats1">0</p>
+                    <p class="a b" id="box1"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats2">0</p>
+                    <p class="a b" id="box2"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats3">0</p>
+                    <p class="a b" id="box3"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats4">0</p>
+                    <p class="a b" id="box4"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats5">0</p>
+                    <p class="a b" id="box5"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats6">0</p>
+                    <p class="a b" id="box6"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats7">0</p>
+                    <p class="a b" id="box7"></p>
+                </div>
+                <div class="column">
+                    <p class="repeats" id="repeats8">0</p>
+                    <p class="a b" id="box8"></p>
+                </div>
             </div>
         </div>
     </main>
