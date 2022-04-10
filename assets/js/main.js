@@ -18,7 +18,7 @@ for (let i = 0; i < aList.length; i++) {
 console.log(repetitions);
 
 //init synths
-const fmSynth = Tone.FMSynth;
+/*const fmSynth = Tone.FMSynth;
 console.log(fmSynth);
 const synth = new Tone.PolySynth(fmSynth).toDestination();
 synth.options = {
@@ -68,7 +68,9 @@ synth.options = {
 		"sustain": 1
 	},
 	"modulationIndex": 25
-}
+}*/
+
+const synth = new Tone.PolySynth(Tone.Synth).toDestination();
 
 for (let i = 0; i < aList.length; i++) {
     let a = aList[i];
