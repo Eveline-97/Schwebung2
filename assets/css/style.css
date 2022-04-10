@@ -31,6 +31,9 @@ html {
     width: 35px;
     height: 35px;
 }
+.a:hover {
+    cursor: pointer;
+}
 
 .selected {
     border: 2px solid white;
