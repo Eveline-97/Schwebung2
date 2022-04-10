@@ -18,7 +18,57 @@ for (let i = 0; i < aList.length; i++) {
 console.log(repetitions);
 
 //init synths
-const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+const fmSynth = Tone.FMSynth;
+console.log(fmSynth);
+const synth = new Tone.PolySynth(fmSynth).toDestination();
+synth.options = {
+	"volume": -10,
+	"detune": 0,
+	"portamento": 0,
+	"harmonicity": 3,
+	"oscillator": {
+		"partialCount": 0,
+		"partials": [],
+		"phase": 0,
+		"type": "sine"
+	},
+	"envelope": {
+		"attack": 0.01,
+		"attackCurve": "linear",
+		"decay": 0.2,
+		"decayCurve": "exponential",
+		"release": 0.5,
+		"releaseCurve": "exponential",
+		"sustain": 1
+	},
+	"modulation": {
+		"partialCount": 10,
+		"partials": [
+			1.2732395447351628,
+			1,
+			0.4822530864197532,
+			0.25173912519290115,
+			0.11578896604938266,
+			0.044129171489197545,
+			0.012345679012345685,
+			0.007236810378086416,
+			0.001883801118827162,
+			0.000048225308641975394
+		],
+		"phase": 0,
+		"type": "custom"
+	},
+	"modulationEnvelope": {
+		"attack": 0.2,
+		"attackCurve": "linear",
+		"decay": 0.01,
+		"decayCurve": "exponential",
+		"release": 0.5,
+		"releaseCurve": "exponential",
+		"sustain": 1
+	},
+	"modulationIndex": 25
+}
 
 for (let i = 0; i < aList.length; i++) {
     let a = aList[i];
